@@ -137,12 +137,32 @@ public class MenuScene {
         });
         Button buttonAyam = new Button();
         buttonAyam.setGraphic(imageView2);
+        buttonAyam.setOnAction(V -> {
+            Ayam ayam = new Ayam(stage);
+            ayam.show();
+            
+        });
+
         Button buttonIkan = new Button();
         buttonIkan.setGraphic(imageView3);
+        buttonIkan.setOnAction(e -> {
+            Ikan ikan = new Ikan(stage);
+            ikan.show();
+        });
+
         Button buttonSayur = new Button();
         buttonSayur.setGraphic(imageView4);
+        buttonSayur.setOnAction(V -> {
+            Sayur sayur = new Sayur(stage);
+            sayur.show();
+        });
+
         Button buttonDaging = new Button();
         buttonDaging.setGraphic(imageView5);
+        buttonDaging.setOnAction(V -> {
+            Daging daging = new Daging(stage);
+            daging.show();
+        });
 
         recipeList = FXCollections.observableArrayList(
             "Ayam Bakar Madu", "Ayam Szechuan Pedas", "Capcay Goreng Sayur", "Daging Tumis Buncis", "Ikan Bakar Bumbu Bali","Rendang Daging Padang", "Steak Daging Black Papper", "Daging Tumis Buncis","Ikan Bakar Bumbu Bali", "Ikan Goreng Tapung Asam Manis", "Sup Ikan Tomat", "Capcay Goreng Sayur", "Tumis Kangkung Bawang Putih", "Sayur Lodeh");
