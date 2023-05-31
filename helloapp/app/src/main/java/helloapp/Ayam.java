@@ -6,6 +6,7 @@ import javafx.stage.Stage;
 
 public class Ayam {
     private Stage stage;
+    
 
     public Ayam(Stage stage){
         this.stage = stage;
