@@ -105,27 +105,27 @@ public class MenuScene {
         Label label2 = new Label("like to Cook?");
         Label label3 = new Label("Populer Recipes");
         
-        Image image = new Image("D:/kisspng-flame-fire-cartoon-clip-art-monochrome-5abcdae20a4f52.5651434315223262420422.png");
+        Image image = new Image("/icon/chicken-icon.png");
         ImageView imageView = new ImageView(image);
         imageView.setFitWidth(20);
         imageView.setFitHeight(20);
 
-        Image image2 = new Image("D:/turkey-removebg-preview.png");
+        Image image2 = new Image("/icon/chicken-icon.png");
         ImageView imageView2 = new ImageView(image2);
         imageView2.setFitWidth(20);
         imageView2.setFitHeight(20);
 
-        Image image3 = new Image("D:/fish-removebg-preview.png");
+        Image image3 = new Image("/icon/fish-icon.png");
         ImageView imageView3 = new ImageView(image3);
         imageView3.setFitWidth(20);
         imageView3.setFitHeight(20);
         
-        Image image4 = new Image("D:/vegetable-removebg-preview.png");
+        Image image4 = new Image("icon/vegetables-icon.png");
         ImageView imageView4 = new ImageView(image4);
         imageView4.setFitWidth(20);
         imageView4.setFitHeight(20);
         
-        Image image5 = new Image("D:/meat-removebg-preview.png");
+        Image image5 = new Image("icon/meat-icon.png");
         ImageView imageView5 = new ImageView(image5);
         imageView5.setFitWidth(20);
         imageView5.setFitHeight(20);
