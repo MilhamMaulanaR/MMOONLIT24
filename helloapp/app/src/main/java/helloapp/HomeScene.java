@@ -29,7 +29,7 @@ public class HomeScene {
         imageView.setFitWidth(350);
         imageView.setFitHeight(600);
 
-        Button buttonMulai = new Button("FOODIES HAVEN");
+        Button buttonMulai = new Button("Get Started");
         buttonMulai.setId("BUTTONMULAI");
         // buttonMulai.setLayoutY(100);
         buttonMulai.setOnAction(V -> {

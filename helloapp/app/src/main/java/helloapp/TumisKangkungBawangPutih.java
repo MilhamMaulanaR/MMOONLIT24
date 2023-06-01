@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.image.ImageView;
 
 public class TumisKangkungBawangPutih {
     private Stage stage;
@@ -17,13 +18,19 @@ public class TumisKangkungBawangPutih {
     public void show(){
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20));
+        
+        ImageView imageView = new ImageView("/image/sayur2.2.jpg");
+        imageView.setFitWidth(350);
+        imageView.setFitHeight(200);
 
         // Judul resep
         Label title = new Label("Tumis Kangkung Bawang Putih");
         title.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
+        title.setId("JUDULRESEP");
 
         Label bahanLabel = new Label("Bahan-bahan:");
         bahanLabel.setStyle("-fx-font-weight: bold;");
+        bahanLabel.setId("LABELBAHAN");
 
         Label bahanDetailLabel = new Label(
                 "- 1 buah wortel, iris tipis memanjang\n"
@@ -38,10 +45,12 @@ public class TumisKangkungBawangPutih {
                         + "- 1/4 sendok teh merica bubuk\n"
                         + "- Minyak goreng secukupnya"
         );
+        bahanDetailLabel.setId("LISTBAHAN");
 
         // Membuat label untuk cara membuat
         Label caraLabel = new Label("Cara membuat:");
         caraLabel.setStyle("-fx-font-weight: bold;");
+        caraLabel.setId("LABELCARAMEMBUAT");
 
         Label caraDetailLabel = new Label(
                 "1. Panaskan minyak dalam wajan, tumis bawang putih hingga harum.\n"
@@ -49,6 +58,7 @@ public class TumisKangkungBawangPutih {
                         + "3. Tambahkan saus tiram, kecap manis, garam, dan merica bubuk. Aduk rata dan masak hingga sayuran matang sempurna.\n"
                         + "4. Sajikan capcay goreng sayur sebagai lauk pendamping nasi."
         );
+        caraDetailLabel.setId("TUTORIAL");
 
         Button button = new Button();
         button.setText("<--Back");
@@ -57,10 +67,11 @@ public class TumisKangkungBawangPutih {
             pencarianScene.show();
         });
 
-        layout.getChildren().addAll(title, bahanLabel, bahanDetailLabel,
+        layout.getChildren().addAll(imageView,title, bahanLabel, bahanDetailLabel,
                 caraLabel, caraDetailLabel);
         layout.getChildren().add(button);
         Scene scene = new Scene(layout, 350, 600);
+        scene.getStylesheets().add(getClass().getResource("/CSS/resepview.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }  

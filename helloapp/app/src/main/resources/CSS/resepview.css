@@ -1,0 +1,33 @@
+@font-face {
+    font-family:"inria sans";
+    src: url('/Font/InriaSansBold700.ttf');
+}
+@font-face {
+    font-family:"poppins";
+    src: url('/Font/PoppinsMedium500.ttf');
+}
+#JUDULRESEP{
+    -fx-font-family:"inria sans";
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+#LABELBAHAN{
+    -fx-font-family:"inria sans";
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+#LISTBAHAN{
+    -fx-font-family:"poppins";
+    -fx-text-fill: #000000;
+    -fx-font-weight: medium;
+}
+#LABELCARAMEMBUAT{
+    -fx-font-family:"inria sans";
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+#TUTORIAL{
+    -fx-font-family:"poppins";
+    -fx-text-fill: #000000;
+    -fx-font-weight: medium;
+}
