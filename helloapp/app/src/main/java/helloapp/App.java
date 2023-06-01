@@ -8,9 +8,9 @@ public class App extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-        HomeScene menuScene = new HomeScene(primaryStage);
+        LoginScene loginScene = new LoginScene(primaryStage);
         primaryStage.setTitle("Recipe Finder");
-        menuScene.show();
+        loginScene.show();
     }
     public static void main(String[] args) {
         launch(args);
