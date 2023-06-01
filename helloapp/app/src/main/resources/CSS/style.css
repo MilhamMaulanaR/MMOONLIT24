@@ -1,3 +1,7 @@
+@font-face {
+    font-family:"InriaSans-Bold ";
+    src: url('/Font/InriaSans-Bold.ttf');
+}
 #code1 {
     -fx-font-family: "Arial";
     -fx-font-size: 20px;
@@ -5,12 +9,9 @@
 
 #BUTTONMULAI{
     -fx-font-family:"InriaSans-Bold";
-    -fx-text-fill: #FFD634;
-    -fx-font-size: 15px;
-    -fx-font-weight:bold;
-    -fx-background-color: transparent;
-    -fx-background: null;
-    -fx-border-color: transparent;
-    -fx-padding: 50px 0;
-    /* -fx-text-fill: white; */
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-background-color: #FFD634;
+    -fx-translate-y: -60px;
 }

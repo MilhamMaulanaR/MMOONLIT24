@@ -29,8 +29,9 @@ public class HomeScene {
         imageView.setFitWidth(350);
         imageView.setFitHeight(600);
 
-        Button buttonMulai = new Button("Get Started");
+        Button buttonMulai = new Button("FOODIES HAVEN");
         buttonMulai.setId("BUTTONMULAI");
+        // buttonMulai.setLayoutY(100);
         buttonMulai.setOnAction(V -> {
 
             MenuScene pencarianScene = new MenuScene(stage);
