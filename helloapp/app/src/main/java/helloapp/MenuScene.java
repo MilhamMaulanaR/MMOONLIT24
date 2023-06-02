@@ -107,13 +107,19 @@ public class MenuScene {
             return cell;
         });
         Label label1 = new Label("What would you");
+        label1.setStyle(" -fx-font-family:poppins;-fx-font-size: 25px; -fx-text-fill: #000000; -fx-font-weight: medium");
         Label label2 = new Label("like to Cook?");
+        label2.setStyle(" -fx-font-family:poppins;-fx-font-size: 25px; -fx-text-fill: #000000; -fx-font-weight: medium");
         Label label3 = new Label("Populer Recipes");
+        label3.setStyle(" -fx-font-family:poppins;-fx-font-size: 25px; -fx-text-fill: #000000; -fx-font-weight: bold");
+        
 
         Label labelGambar1 = new Label("Ayam Bakar Madu");
+        labelGambar1.setStyle(" -fx-font-family:poppins;-fx-font-size: 14px; -fx-text-fill: #000000; -fx-font-weight: bold");
         labelGambar1.setAlignment(Pos.CENTER);
 
         Label labelGambar2 = new Label("Ayam Szechuan Pedas");
+        labelGambar1.setStyle(" -fx-font-family:poppins;-fx-font-size: 14px; -fx-text-fill: #000000; -fx-font-weight: bold");
         labelGambar2.setAlignment(Pos.CENTER);
         
 
