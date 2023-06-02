@@ -10,6 +10,8 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.geometry.HPos;
+
 
 public class LoginScene {
     private Stage stage;
@@ -20,12 +22,16 @@ public class LoginScene {
 
     public void show(){
         Label labelJudul = new Label("FOODIE'S HAVEN");
-        labelJudul.setStyle("-fx-font-family: Inria sans; -fx-font-size: 25px; -fx-text-fill: #000000; -fx-font-weight: bold");
+        labelJudul.setId("labeljudullogin");
+        // labelJudul.setStyle("-fx-font-family: Inria sans; -fx-font-size: 25px; -fx-text-fill: #000000; -fx-font-weight: bold");
         Label labelJuLabel2 = new Label("Cookbook Recipes");
-        labelJuLabel2.setStyle("-fx-font-family: Inria sans; -fx-font-size: 12px; -fx-text-fill: #000000; -fx-font-weight: bold");
+        labelJuLabel2.setId("judulloginsecodary");
+        // labelJuLabel2.setStyle("-fx-font-family: Inria sans; -fx-font-size: 12px; -fx-text-fill: #000000; -fx-font-weight: bold");
 
         TextField textField = new TextField();
+        textField.setPromptText("Masukkan Nama");
         TextField textField2 = new TextField();
+        textField2.setPromptText("Masukkan Password");
 
         VBox vBoxJudul = new VBox(0);
         vBoxJudul.getChildren().add(labelJudul);
@@ -37,6 +43,7 @@ public class LoginScene {
         VBoxLogin.getChildren().add(textField2);
 
         Button buttonLogIn = new Button("Log in");
+        buttonLogIn.setId("ButtonLogin");
         buttonLogIn.setOnAction(V -> {
             MenuScene menuScene = new MenuScene(stage);
             menuScene.show();
@@ -48,10 +55,12 @@ public class LoginScene {
         gridPane.add(VBoxLogin, 0, 6);
         gridPane.add(buttonLogIn, 0, 7);
         gridPane.setAlignment(Pos.CENTER);
+        GridPane.setHalignment(buttonLogIn, HPos.CENTER);
         gridPane.setStyle("-fx-background-color: #FFD634");
         gridPane.setAlignment(Pos.TOP_CENTER);
 
         Scene scene = new Scene(gridPane, 350, 600);
+        scene.getStylesheets().add(getClass().getResource("/CSS/login.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }

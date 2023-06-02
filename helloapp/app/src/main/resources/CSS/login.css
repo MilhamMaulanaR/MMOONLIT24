@@ -1,0 +1,26 @@
+@font-face {
+    font-family:"inria sans";
+    src: url('/Font/InriaSansBold700.ttf');
+}
+
+#labeljudullogin{
+    -fx-font-family: "inria sans";
+    -fx-font-size: 28px;
+    -fx-text-fill: #000000; 
+    -fx-font-weight: 700;
+}
+
+#judulloginsecodary{
+    -fx-font-family: "inria sans";
+    -fx-font-size: 12px; 
+    -fx-text-fill: #000000; 
+    -fx-font-weight: medium;
+}
+
+#ButtonLogin{
+    -fx-font-family: "inria sans";
+    -fx-font-size: 12px; 
+    -fx-text-fill: #000000; 
+    -fx-font-weight: 700;
+    -fx-alignment: top-center;
+}
