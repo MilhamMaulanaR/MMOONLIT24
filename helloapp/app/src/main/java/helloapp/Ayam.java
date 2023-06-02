@@ -12,6 +12,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+
 public class Ayam {
     private Stage stage;
 
@@ -20,7 +21,7 @@ public class Ayam {
     }
 
     public void show(){
-        Image image1 = new Image("C:/Users/LENOVO/Downloads/project/project/Evan/JavaFX/helloapp/app/src/main/resources/ayam3.2.png");
+        Image image1 = new Image("/image/ayam3.2.png");
         ImageView imageView1 = new ImageView(image1);
         imageView1.setFitWidth(100);
         imageView1.setFitHeight(200);
@@ -31,7 +32,7 @@ public class Ayam {
             ayamSzechuanPedas.show();
         });
 
-        Image image2 = new Image("C:/Users/LENOVO/Downloads/project/project/Evan/JavaFX/helloapp/app/src/main/resources/ayam2.1.jpg");
+        Image image2 = new Image("/image/ayam2.1.jpg");
         ImageView imageView2 = new ImageView(image2);
         imageView2.setFitWidth(100);
         imageView2.setFitHeight(200);
@@ -45,6 +46,7 @@ public class Ayam {
         HBox hBox = new HBox(20);
         hBox.getChildren().add(buttonAyamBakarMadu);
         hBox.getChildren().add(buttonAyamSzechuan);
+
         hBox.setAlignment(Pos.CENTER);
 
         Button button = new Button();

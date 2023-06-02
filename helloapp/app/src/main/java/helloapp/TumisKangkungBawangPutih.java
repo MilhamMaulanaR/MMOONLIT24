@@ -12,7 +12,7 @@ public class TumisKangkungBawangPutih {
 
     public TumisKangkungBawangPutih(Stage stage){
         this.stage = stage;
-    }
+    } 
 
     public void show(){
         VBox layout = new VBox(10);

@@ -17,7 +17,7 @@ public class Ikan {
     }
 
     public void show(){
-        Image image1 = new Image("C:/Users/LENOVO/Downloads/project/project/Evan/JavaFX/helloapp/app/src/main/resources/ikan1.1.jpg");
+        Image image1 = new Image("/image/ikan1.1.jpg");
         ImageView imageView1 = new ImageView(image1);
         imageView1.setFitWidth(100);
         imageView1.setFitHeight(200);
@@ -28,7 +28,7 @@ public class Ikan {
             ikanBakarBumbuBali.show();
 
         });
-        Image image2 = new Image("C:/Users/LENOVO/Downloads/project/project/Evan/JavaFX/helloapp/app/src/main/resources/ikan2.1.jpg");
+        Image image2 = new Image("/image/ikan2.1.jpg");
         ImageView imageView2 = new ImageView(image2);
         imageView2.setFitWidth(100);
         imageView2.setFitHeight(200);
@@ -39,7 +39,7 @@ public class Ikan {
             ikanGorengTepungAsamManis.show();
         });
         
-        Image image3 = new Image("C:/Users/LENOVO/Downloads/project/project/Evan/JavaFX/helloapp/app/src/main/resources/ikan3.2.jpg");
+        Image image3 = new Image("/image/ikan3.2.jpg");
         ImageView imageView3 = new ImageView(image3);
         imageView3.setFitWidth(100);
         imageView3.setFitHeight(200);
