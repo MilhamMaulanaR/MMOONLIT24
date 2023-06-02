@@ -17,7 +17,7 @@ public class Daging {
     }
 
     public void show(){
-        Image image = new Image("C:/Users/LENOVO/Downloads/project/project/Evan/JavaFX/helloapp/app/src/main/resources/daging1.1.jpg");
+        Image image = new Image("/image/daging1.1.jpg");
         ImageView imageView = new ImageView(image);
         imageView.setFitWidth(100);
         imageView.setFitHeight(200);
@@ -28,7 +28,7 @@ public class Daging {
             rendangDagingPadang.show();
         });
         
-        Image image2 = new Image("C:/Users/LENOVO/Downloads/project/project/Evan/JavaFX/helloapp/app/src/main/resources/daging2.2.png");
+        Image image2 = new Image("/image/daging2.2.png");
         ImageView imageView2 = new ImageView(image2);
         imageView2.setFitWidth(100);
         imageView2.setFitHeight(200);
@@ -39,7 +39,7 @@ public class Daging {
             steakDagingBlackPapper.show();
         });
         
-        Image image3 = new Image("C:/Users/LENOVO/Downloads/project/project/Evan/JavaFX/helloapp/app/src/main/resources/daging3.2.jpg");
+        Image image3 = new Image("/image/daging3.2.jpg");
         ImageView imageView3 = new ImageView(image3);
         imageView3.setFitWidth(100);
         imageView3.setFitHeight(200);

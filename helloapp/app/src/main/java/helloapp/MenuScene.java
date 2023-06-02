@@ -107,42 +107,48 @@ public class MenuScene {
             return cell;
         });
         Label label1 = new Label("What would you");
+        label1.setStyle(" -fx-font-family:poppins;-fx-font-size: 25px; -fx-text-fill: #000000; -fx-font-weight: medium");
         Label label2 = new Label("like to Cook?");
+        label2.setStyle(" -fx-font-family:poppins;-fx-font-size: 25px; -fx-text-fill: #000000; -fx-font-weight: medium");
         Label label3 = new Label("Populer Recipes");
+        label3.setStyle(" -fx-font-family:poppins;-fx-font-size: 25px; -fx-text-fill: #000000; -fx-font-weight: bold");
+        
 
         Label labelGambar1 = new Label("Ayam Bakar Madu");
+        labelGambar1.setStyle(" -fx-font-family:poppins;-fx-font-size: 14px; -fx-text-fill: #000000; -fx-font-weight: bold");
         labelGambar1.setAlignment(Pos.CENTER);
 
         Label labelGambar2 = new Label("Ayam Szechuan Pedas");
+        labelGambar1.setStyle(" -fx-font-family:poppins;-fx-font-size: 14px; -fx-text-fill: #000000; -fx-font-weight: bold");
         labelGambar2.setAlignment(Pos.CENTER);
         
 
-        Image image2 = new Image("C:/Users/LENOVO/Downloads/project/project/Evan/JavaFX/helloapp/app/src/main/resources/turkey-removebg-preview.png");
+        Image image2 = new Image("/icon/chicken-icon.png");
         ImageView imageView2 = new ImageView(image2);
         imageView2.setFitWidth(20);
         imageView2.setFitHeight(20);
 
-        Image image3 = new Image("C:/Users/LENOVO/Downloads/project/project/Evan/JavaFX/helloapp/app/src/main/resources/fish-removebg-preview.png");
+        Image image3 = new Image("/icon/fish-icon.png");
         ImageView imageView3 = new ImageView(image3);
         imageView3.setFitWidth(20);
         imageView3.setFitHeight(20);
         
-        Image image4 = new Image("C:/Users/LENOVO/Downloads/project/project/Evan/JavaFX/helloapp/app/src/main/resources/vegetable-removebg-preview.png");
+        Image image4 = new Image("/icon/vegetables-icon.png");
         ImageView imageView4 = new ImageView(image4);
         imageView4.setFitWidth(20);
         imageView4.setFitHeight(20);
         
-        Image image5 = new Image("C:/Users/LENOVO/Downloads/project/project/Evan/JavaFX/helloapp/app/src/main/resources/meat-removebg-preview.png");
+        Image image5 = new Image("/icon/meat-icon.png");
         ImageView imageView5 = new ImageView(image5);
         imageView5.setFitWidth(20);
         imageView5.setFitHeight(20);
 
-        Image image6 = new Image("C:/Users/LENOVO/Downloads/project/project/Evan/JavaFX/helloapp/app/src/main/resources/ayam2.1.jpg");
+        Image image6 = new Image("/image/ayam2.1.jpg");
         ImageView imageView6 = new ImageView(image6);
         imageView6.setFitWidth(100);
         imageView6.setFitHeight(200);
 
-        Image image7 = new Image("C:/Users/LENOVO/Downloads/project/project/Evan/JavaFX/helloapp/app/src/main/resources/ikan2.1.jpg");
+        Image image7 = new Image("/image/ikan2.1.jpg");
         ImageView imageView7 = new ImageView(image7);
         imageView7.setFitWidth(100);
         imageView7.setFitHeight(200);
