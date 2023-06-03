@@ -1,10 +1,15 @@
 package helloapp;
 
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class SupIkanTomat {
@@ -15,9 +20,10 @@ public class SupIkanTomat {
     }
 
     public void show(){
-        VBox layout = new VBox(10);
-        layout.setPadding(new Insets(20));
-
+        ImageView imageView = new ImageView("/backgroundresep/sopikanmaktimahbiadab.png");
+        imageView.setFitWidth(350);
+        imageView.setFitHeight(600);
+        
         // Judul resep
         Label title = new Label("Sup Ikan Tomat");
         title.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
@@ -25,7 +31,7 @@ public class SupIkanTomat {
         Label bahanLabel = new Label("Bahan-bahan:");
         bahanLabel.setStyle("-fx-font-weight: bold;");
 
-        Label bahanDetailLabel = new Label(
+        Text bahanDetailLabel = new Text(
                 "- 500 gram fillet ikan (misalnya kakap atau nila), potong menjadi dadu\n"
                         + "- 2 buah tomat, potong dadu\n"
                         + "- 1 buah wortel, iris tipis\n"
@@ -44,7 +50,7 @@ public class SupIkanTomat {
         Label caraLabel = new Label("Cara membuat:");
         caraLabel.setStyle("-fx-font-weight: bold;");
 
-        Label caraDetailLabel = new Label(
+        Text caraDetailLabel = new Text(
                 "1. Panaskan minyak dalam panci, tumis bawang bombay dan bawang putih hingga harum.\n"
                         + "2. Tambahkan wortel dan tomat, tumis hingga sedikit layu.\n"
                         + "3. Masukkan potongan ikan dan kaldu ikan. Masak hingga ikan matang dan bumbu meresap.\n"
@@ -52,6 +58,7 @@ public class SupIkanTomat {
                         + "5. Sajikan sup ikan tomat dalam mangkuk, taburi dengan daun bawang iris.\n"
                         + "6. Nikmati sup ikan tomat hangat dengan nasi atau roti."
         );
+        caraDetailLabel.setWrappingWidth(270);
 
         Button button = new Button();
         button.setText("<--Back");
@@ -59,12 +66,28 @@ public class SupIkanTomat {
             MenuScene pencarianScene = new MenuScene(stage);
             pencarianScene.show();
         });
-
-        layout.getChildren().addAll(title, bahanLabel, bahanDetailLabel,
-                caraLabel, caraDetailLabel);
+        VBox layout = new VBox(10);
+        layout.setId("LAYOUTRESEP");
+        layout.setPadding(new Insets(20));
+        layout.getChildren().addAll(title, bahanLabel, bahanDetailLabel,caraLabel, caraDetailLabel);
         layout.getChildren().add(button);
-        Scene scene = new Scene(layout, 350, 600);
+        layout.setAlignment(Pos.BOTTOM_LEFT);
+
+    
+        StackPane stackPaneImage = new StackPane();
+        stackPaneImage.getChildren().addAll(imageView, layout);
+        
+        ScrollPane scrollPane = new ScrollPane();
+        scrollPane.setContent(stackPaneImage);
+        scrollPane.setFitToWidth(true); // Memungkinkan konten memperluas lebar scrollPane
+        scrollPane.setFitToHeight(true); // Memungkinkan konten memperluas tinggi scrollPane
+
+        Scene scene = new Scene(scrollPane, 350, 600);
+        scene.getStylesheets().add(getClass().getResource("/CSS/backgroundresep.css").toExternalForm());
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
+
+        
     }  
 }
