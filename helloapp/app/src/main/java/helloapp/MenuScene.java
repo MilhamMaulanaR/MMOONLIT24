@@ -242,6 +242,7 @@ public class MenuScene {
         
         Scene scene = new Scene(gridPane, 350, 600);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     } 
 }

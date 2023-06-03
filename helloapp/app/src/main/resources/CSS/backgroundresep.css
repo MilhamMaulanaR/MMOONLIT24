@@ -1,0 +1,15 @@
+@font-face {
+    font-family:"inria sans";
+    src: url('/Font/InriaSansRegular400.ttf');
+}
+@font-face {
+    font-family:"poppins";
+    src: url('/Font/PoppinsMedium500.ttf');
+}
+#LAYOUTRESEP{
+    -fx-alignment: bottom; /* Mengatur penempatan vertikal ke tengah */
+    /* -fx-pref-height: 100%; */
+    -fx-font-family:"inria sans";
+    -fx-text-fill: #000000;
+    -fx-font-weight: medium;
+}

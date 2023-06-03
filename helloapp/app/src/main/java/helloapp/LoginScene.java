@@ -62,6 +62,7 @@ public class LoginScene {
         Scene scene = new Scene(gridPane, 350, 600);
         scene.getStylesheets().add(getClass().getResource("/CSS/login.css").toExternalForm());
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 }

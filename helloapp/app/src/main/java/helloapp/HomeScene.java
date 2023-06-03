@@ -59,6 +59,7 @@ public class HomeScene {
         Scene scene = new Scene(pane, 350, 600);
         scene.getStylesheets().add(getClass().getResource("/CSS/style.css").toExternalForm());
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 }
