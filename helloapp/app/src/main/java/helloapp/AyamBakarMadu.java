@@ -75,6 +75,7 @@ public class AyamBakarMadu {
     
         StackPane stackPaneImage = new StackPane();
         stackPaneImage.getChildren().addAll(imageView, layout);
+        StackPane.setAlignment(imageView, Pos.TOP_CENTER);
         
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.setContent(stackPaneImage);

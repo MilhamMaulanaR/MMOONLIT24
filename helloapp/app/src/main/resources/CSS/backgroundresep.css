@@ -7,9 +7,15 @@
     src: url('/Font/PoppinsMedium500.ttf');
 }
 #LAYOUTRESEP{
-    -fx-alignment: bottom; /* Mengatur penempatan vertikal ke tengah */
+    /* -fx-alignment: CENTER_BOTTOM; */
     /* -fx-pref-height: 100%; */
     -fx-font-family:"inria sans";
     -fx-text-fill: #000000;
     -fx-font-weight: medium;
+}
+#LAYOUTRESEPIKANASAMMANIS{
+    -fx-font-family:"inria sans";
+    -fx-text-fill: #000000;
+    -fx-font-weight: medium;
+    -fx-alignment: bottom-left;
 }

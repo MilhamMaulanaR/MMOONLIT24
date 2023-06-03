@@ -63,6 +63,7 @@ public class CapcayGorengSayur {
             MenuScene pencarianScene = new MenuScene(stage);
             pencarianScene.show();
         });
+
         VBox layout = new VBox(10);
         layout.setId("LAYOUTRESEP");
         layout.setPadding(new Insets(20));
@@ -73,6 +74,7 @@ public class CapcayGorengSayur {
     
         StackPane stackPaneImage = new StackPane();
         stackPaneImage.getChildren().addAll(imageView, layout);
+        StackPane.setAlignment(imageView, Pos.TOP_CENTER);
         
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.setContent(stackPaneImage);

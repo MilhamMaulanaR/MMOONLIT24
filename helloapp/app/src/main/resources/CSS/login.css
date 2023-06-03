@@ -7,20 +7,20 @@
     -fx-font-family: "inria sans";
     -fx-font-size: 28px;
     -fx-text-fill: #000000; 
-    -fx-font-weight: bold;
+    -fx-font-weight: 700;
 }
 
 #judulloginsecodary{
     -fx-font-family: "inria sans";
     -fx-font-size: 12px; 
     -fx-text-fill: #000000; 
-    -fx-font-weight: medium;
+    -fx-font-weight: 700;
 }
 
 #ButtonLogin{
     -fx-font-family: "inria sans";
     -fx-font-size: 12px; 
     -fx-text-fill: #000000; 
-    -fx-font-weight: bold;
+    -fx-font-weight: 700;
     -fx-alignment: top-center;
 }

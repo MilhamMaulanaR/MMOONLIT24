@@ -34,7 +34,8 @@ public class IkanBakarBumbuBali {
         bahanLabel.setStyle("-fx-font-weight: bold;");
 
         Text bahanDetailLabel = new Text(
-                "- 2 ekor ikan laut (gurami atau kakap), bersihkan dan sayat-sayat pada bagian sisi ikan\n"
+                "- 2 ekor ikan laut (gurami atau kakap),\n"
+                        +" bersihkan dan sayat-sayat pada bagian sisi ikan\n"
                         + "- 6 siung bawang merah\n"
                         + "- 4 siung bawang putih\n"
                         + "- 5 buah cabai merah keriting\n"
@@ -79,7 +80,8 @@ public class IkanBakarBumbuBali {
         
             StackPane stackPaneImage = new StackPane();
             stackPaneImage.getChildren().addAll(imageView, layout);
-            
+            StackPane.setAlignment(imageView, Pos.TOP_CENTER);
+
             ScrollPane scrollPane = new ScrollPane();
             scrollPane.setContent(stackPaneImage);
             scrollPane.setFitToWidth(true); 

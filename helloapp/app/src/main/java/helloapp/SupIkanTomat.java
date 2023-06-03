@@ -45,6 +45,7 @@ public class SupIkanTomat {
                         + "- Lada secukupnya\n"
                         + "- Daun bawang, iris halus (untuk hiasan)"
         );
+        bahanDetailLabel.setWrappingWidth(270);
 
         // Membuat label untuk cara membuat
         Label caraLabel = new Label("Cara membuat:");
@@ -76,6 +77,7 @@ public class SupIkanTomat {
     
         StackPane stackPaneImage = new StackPane();
         stackPaneImage.getChildren().addAll(imageView, layout);
+        StackPane.setAlignment(imageView, Pos.TOP_CENTER);
         
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.setContent(stackPaneImage);

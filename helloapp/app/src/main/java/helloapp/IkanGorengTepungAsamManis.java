@@ -1,16 +1,16 @@
 package helloapp;
 
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.ScrollPane;
+import javafx.geometry.Pos;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
 public class IkanGorengTepungAsamManis {
     private Stage stage;
@@ -34,7 +34,8 @@ public class IkanGorengTepungAsamManis {
         bahanLabel.setStyle("-fx-font-weight: bold;");
 
         Text bahanDetailLabel = new Text(
-                "- 500 gram ikan fillet (misalnya ikan tenggiri atau nila), potong menjadi bagian-bagian\n"
+                "- 500 gram ikan fillet (misalnya ikan tenggiri atau nila),\n"
+                        + "    potong menjadi bagian-bagian\n"
                         + "- 1/2 sendok teh garam\n"
                         + "- 1/4 sendok teh merica bubuk\n"
                         + "- 1 sendok teh air jeruk nipis\n"
@@ -59,6 +60,9 @@ public class IkanGorengTepungAsamManis {
         );
         sausDetailLabel.setWrappingWidth(270);
 
+        Label caraLabel = new Label("Cara membuat:");
+        caraLabel.setStyle("-fx-font-weight: bold;");
+
         Text caraDetailLabel = new Text(
             
                     " 1. Lumuri potongan ikan dengan garam, merica, dan air jeruk nipis. Diamkan selama 15 menit.\n"
@@ -78,17 +82,17 @@ public class IkanGorengTepungAsamManis {
             pencarianScene.show(); 
         });
 
-
         VBox layout = new VBox(10);
-        layout.setId("LAYOUTRESEP");
+        layout.setId("LAYOUTRESEPIKANASAMMANIS");
         layout.setPadding(new Insets(20));
-        layout.getChildren().addAll(title, bahanLabel, bahanDetailLabel,caraDetailLabel, sausDetailLabel);
+        layout.getChildren().addAll(title, bahanLabel, bahanDetailLabel,sausLabel, sausDetailLabel,caraLabel,caraDetailLabel);
         layout.getChildren().add(button);
         layout.setAlignment(Pos.BOTTOM_LEFT);
 
     
         StackPane stackPaneImage = new StackPane();
         stackPaneImage.getChildren().addAll(imageView, layout);
+        StackPane.setAlignment(imageView, Pos.TOP_CENTER);
         
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.setContent(stackPaneImage);
