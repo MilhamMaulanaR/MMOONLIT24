@@ -33,8 +33,8 @@ public class HomeScene {
         buttonMulai.setId("BUTTONMULAI");
         // buttonMulai.setLayoutY(100);
         buttonMulai.setOnAction(V -> {
-            LoginScene loginScene = new LoginScene(stage);
-            loginScene.show();
+            MenuScene menuScene = new MenuScene(stage);
+            menuScene.show();
         });
 
 

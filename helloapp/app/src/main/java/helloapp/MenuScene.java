@@ -83,7 +83,7 @@ public class MenuScene {
                 String selectedRecipe = cell.getItem();
                 if (selectedRecipe != null) {
                     if (selectedRecipe.equals("Ayam Goreng Tepung")){
-                        AyamGorengTepung ayamGorengTepung = new  AyamGorengTepung(stage);
+                        AyamGorengTepung ayamGorengTepung = new AyamGorengTepung(stage);
                         ayamGorengTepung.show();
                     } else if (selectedRecipe.equals("Ayam Szechuan Pedas")){
                         AyamSzechuanPedas ayamSzechuanPedas = new AyamSzechuanPedas(stage);
