@@ -74,11 +74,13 @@ public class AyamSzechuanPedas {
         layout.setPadding(new Insets(200,20,20,20));
         layout.getChildren().addAll(title, bahanLabel, bahanDetailLabel,caraLabel, caraDetailLabel);
         layout.getChildren().add(button);
-        layout.setAlignment(Pos.CENTER);
+        layout.setAlignment(Pos.BOTTOM_LEFT);
 
         
         StackPane stackPaneImage = new StackPane();
         stackPaneImage.getChildren().addAll(imageView, layout);
+        StackPane.setAlignment(imageView, Pos.TOP_CENTER);
+        stackPaneImage.setStyle("-fx-background-color:white;");
         
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.setContent(stackPaneImage);

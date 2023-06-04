@@ -45,30 +45,39 @@ public class LoginScene extends BackButton{
 
         Button buttonLogIn = new Button("Log in");
         buttonLogIn.setId("ButtonLogin");
+        // buttonLogIn.setId("BUTTONMULAI");
         buttonLogIn.setOnAction(V -> {
             MenuScene menuScene = new MenuScene(stage);
             menuScene.show();
         });
+        buttonLogIn.setAlignment(Pos.CENTER);
 
         Button backButton = new Button(button());
         backButton.setOnAction(V -> {
             HomeScene homeScene = new HomeScene(stage);
             homeScene.show();
         });
+        VBox buttonLogin = new VBox();
+        buttonLogin.getChildren().addAll(buttonLogIn);
+        buttonLogin.setAlignment(Pos.CENTER);
 
         GridPane gridPane = new GridPane();
         gridPane.setPadding(new Insets(70));
         gridPane.add(vBoxJudul, 0, 0);
         gridPane.add(VBoxLogin, 0, 6);
-        gridPane.add(buttonLogIn, 0, 7);
+        gridPane.add(buttonLogin, 0, 7);
         gridPane.add(backButton, 0, 8);
-        gridPane.setAlignment(Pos.CENTER);
-        GridPane.setHalignment(buttonLogIn, HPos.CENTER);
+        // gridPane.setAlignment(Pos.CENTER);
+        // GridPane.setHalignment(buttonLogIn, HPos.CENTER);
         gridPane.setStyle("-fx-background-color: #FFD634");
         gridPane.setAlignment(Pos.TOP_CENTER);
+        // VBox vBoxSemua = new VBox();
+        // vBoxSemua.getChildren().addAll(gr,VBoxLogin,buttonLogIn,backButton);
+        // vBoxSemua.setAlignment(Pos.CENTER);
 
         Scene scene = new Scene(gridPane, 350, 600);
         scene.getStylesheets().add(getClass().getResource("/CSS/login.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/CSS/style.css").toExternalForm());
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();

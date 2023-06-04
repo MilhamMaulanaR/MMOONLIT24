@@ -1,0 +1,16 @@
+#BUTTONJENISBAHAN{
+    -fx-background-color: transparent;
+    -fx-background-radius: 20;
+}
+#LABEL3{
+    -fx-alignment: center;
+}
+#GAMBAR{
+    -fx-background-radius: 50%;
+}
+#BUTTON{
+    -fx-background-radius: 20px;
+}
+#SEARCHFIELD{
+    -fx-background-color: #d9d9d98a;
+}

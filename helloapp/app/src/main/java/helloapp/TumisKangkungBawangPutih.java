@@ -76,6 +76,7 @@ public class TumisKangkungBawangPutih {
         StackPane stackPaneImage = new StackPane();
         stackPaneImage.getChildren().addAll(imageView, layout);
         StackPane.setAlignment(imageView, Pos.TOP_CENTER);
+        stackPaneImage.setStyle("-fx-background-color:white;");
         
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.setContent(stackPaneImage);
