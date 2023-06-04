@@ -6,6 +6,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
+import javafx.scene.control.ScrollPane;
+import javafx.geometry.Pos;
+import javafx.scene.text.Text;
 
 public class SayurLodeh {
     private Stage stage;
@@ -15,8 +20,9 @@ public class SayurLodeh {
     }
 
     public void show(){
-        VBox layout = new VBox(10);
-        layout.setPadding(new Insets(20));
+        ImageView imageView = new ImageView("/backgroundresep/SayurLodeh.png");
+        imageView.setFitWidth(350);
+        imageView.setFitHeight(600);
 
         // Judul resep
         Label title = new Label("Sayur Lodeh");
@@ -26,7 +32,7 @@ public class SayurLodeh {
         Label bahanLabel = new Label("Bahan-bahan:");
         bahanLabel.setStyle("-fx-font-weight: bold;");
 
-        Label bahanDetailLabel = new Label(
+        Text bahanDetailLabel = new Text(
                 "- 1 buah wortel, iris tipis memanjang\n"
                         + "- 1 buah buncis, potong-potong\n"
                         + "- 1 buah paprika merah, iris tipis\n"
@@ -44,12 +50,13 @@ public class SayurLodeh {
         Label caraLabel = new Label("Cara membuat:");
         caraLabel.setStyle("-fx-font-weight: bold;");
 
-        Label caraDetailLabel = new Label(
+        Text caraDetailLabel = new Text(
                 "1. Panaskan minyak dalam wajan, tumis bawang putih hingga harum.\n"
                         + "2. Masukkan wortel, buncis, paprika merah, paprika hijau, dan kol. Tumis hingga sayuran layu.\n"
                         + "3. Tambahkan saus tiram, kecap manis, garam, dan merica bubuk. Aduk rata dan masak hingga sayuran matang sempurna.\n"
                         + "4. Sajikan capcay goreng sayur sebagai lauk pendamping nasi."
         );
+        caraDetailLabel.setWrappingWidth(270);
 
         Button button = new Button();
         button.setText("<--Back");
@@ -57,12 +64,26 @@ public class SayurLodeh {
             MenuScene pencarianScene = new MenuScene(stage);
             pencarianScene.show();
         });
-
-        layout.getChildren().addAll(title, bahanLabel, bahanDetailLabel,
-                caraLabel, caraDetailLabel);
+        VBox layout = new VBox(10);
+        layout.setPadding(new Insets(200,20,20,20));
+        layout.setId("LAYOUTRESEP");
+        layout.getChildren().addAll(title, bahanLabel, bahanDetailLabel,caraLabel, caraDetailLabel);
         layout.getChildren().add(button);
-        Scene scene = new Scene(layout, 350, 600);
+        layout.setAlignment(Pos.BOTTOM_LEFT);
+
+        StackPane stackPaneImage = new StackPane();
+        stackPaneImage.getChildren().addAll(imageView, layout);
+        StackPane.setAlignment(imageView, Pos.TOP_CENTER);
+        
+        ScrollPane scrollPane = new ScrollPane();
+        scrollPane.setContent(stackPaneImage);
+        scrollPane.setFitToWidth(true); // Memungkinkan konten memperluas lebar scrollPane
+        scrollPane.setFitToHeight(true); // Memungkinkan konten memperluas tinggi scrollPane
+
+        Scene scene = new Scene(scrollPane, 350, 600);
+        scene.getStylesheets().add(getClass().getResource("/CSS/backgroundresep.css").toExternalForm());
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }  
 }

@@ -36,15 +36,15 @@ public class Ayam {
         ImageView imageView2 = new ImageView(image2);
         imageView2.setFitWidth(100);
         imageView2.setFitHeight(200);
-        Button buttonAyamBakarMadu = new Button();
-        buttonAyamBakarMadu.setGraphic(imageView2);
-        buttonAyamBakarMadu.setOnAction(V -> {
-            AyamBakarMadu ayamBakarMadu = new AyamBakarMadu(stage);
-            ayamBakarMadu.show();
+        Button buttonAyamGorengTepung = new Button();
+        buttonAyamGorengTepung.setGraphic(imageView2);
+        buttonAyamGorengTepung.setOnAction(V -> {
+            AyamGorengTepung ayamGorengTepung = new AyamGorengTepung(stage);
+            ayamGorengTepung.show();
         });
         
         HBox hBox = new HBox(20);
-        hBox.getChildren().add(buttonAyamBakarMadu);
+        hBox.getChildren().add(buttonAyamGorengTepung);
         hBox.getChildren().add(buttonAyamSzechuan);
 
         hBox.setAlignment(Pos.CENTER);

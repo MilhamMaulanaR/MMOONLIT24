@@ -12,10 +12,10 @@ import javafx.scene.control.ScrollPane;
 import javafx.geometry.Pos;
 import javafx.scene.text.Text;
 
-public class AyamBakarMadu {
+public class AyamGorengTepung {
     private Stage stage;
 
-    public AyamBakarMadu(Stage stage){
+    public AyamGorengTepung(Stage stage){
         this.stage = stage;
     }
 
@@ -67,7 +67,8 @@ public class AyamBakarMadu {
         });
         VBox layout = new VBox(10);
         layout.setId("LAYOUTRESEP");
-        layout.setPadding(new Insets(20));
+        // layout.setPadding(new Insets(20));
+        layout.setPadding(new Insets(200,20,20,20));
         layout.getChildren().addAll(title, bahanLabel, bahanDetailLabel,caraLabel, caraDetailLabel);
         layout.getChildren().add(button);
         layout.setAlignment(Pos.BOTTOM_LEFT);

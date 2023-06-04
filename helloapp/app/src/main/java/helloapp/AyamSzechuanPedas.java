@@ -71,7 +71,7 @@ public class AyamSzechuanPedas {
         });
         VBox layout = new VBox(10);
         layout.setId("LAYOUTRESEP");
-        layout.setPadding(new Insets(20));
+        layout.setPadding(new Insets(200,20,20,20));
         layout.getChildren().addAll(title, bahanLabel, bahanDetailLabel,caraLabel, caraDetailLabel);
         layout.getChildren().add(button);
         layout.setAlignment(Pos.CENTER);

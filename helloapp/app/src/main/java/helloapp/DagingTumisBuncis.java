@@ -6,6 +6,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
+import javafx.scene.control.ScrollPane;
+import javafx.geometry.Pos;
+import javafx.scene.text.Text;
 
 public class DagingTumisBuncis {
     private Stage stage;
@@ -15,8 +20,9 @@ public class DagingTumisBuncis {
     }
 
     public void show(){
-        VBox layout = new VBox(10);
-        layout.setPadding(new Insets(20));
+        ImageView imageView = new ImageView("/backgroundresep/DagingTumisbuncis.png");
+        imageView.setFitWidth(350);
+        imageView.setFitHeight(600);
 
         // Judul resep
         Label title = new Label("Daging Tumis Buncis");
@@ -26,7 +32,7 @@ public class DagingTumisBuncis {
         Label bahanLabel = new Label("Bahan-bahan:");
         bahanLabel.setStyle("-fx-font-weight: bold;");
 
-        Label bahanDetailLabel = new Label(
+        Text bahanDetailLabel = new Text(
                 "- 250 gram daging sapi, iris tipis\n"
                         + "- 150 gram buncis, potong-potong\n"
                         + "- 1 buah wortel, iris tipis memanjang\n"
@@ -44,13 +50,14 @@ public class DagingTumisBuncis {
         Label caraLabel = new Label("Cara membuat:");
         caraLabel.setStyle("-fx-font-weight: bold;");
 
-        Label caraDetailLabel = new Label(
+        Text caraDetailLabel = new Text(
                 "1. Panaskan minyak dalam wajan, tumis bawang putih hingga harum.\n"
                         + "2. Tambahkan daging sapi, tumis hingga berubah warna.\n"
                         + "3. Masukkan bawang bombay, buncis, wortel, dan paprika merah. Tumis hingga sayuran sedikit layu.\n"
                         + "4. Tuangkan saus tiram, kecap manis, merica bubuk, dan garam. Aduk rata dan masak hingga semua bahan matang sempurna.\n"
                         + "5. Sajikan daging tumis buncis dengan nasi putih hangat."
         );
+        caraDetailLabel.setWrappingWidth(270);
 
         Button button = new Button();
         button.setText("<--Back");
@@ -59,11 +66,27 @@ public class DagingTumisBuncis {
             pencarianScene.show(); });
 
         // Menambahkan komponen ke dalam layout
+        VBox layout = new VBox(10);
+        layout.setId("LAYOUTRESEP");
+        layout.setPadding(new Insets(200,20,20,20));
         layout.getChildren().addAll(title, bahanLabel, bahanDetailLabel, caraLabel, caraDetailLabel);
-
         layout.getChildren().add(button);
-        Scene scene = new Scene(layout, 350, 600);
+        layout.setAlignment(Pos.BOTTOM_LEFT);
+
+        StackPane stackPaneImage = new StackPane();
+        stackPaneImage.getChildren().addAll(imageView, layout);
+        StackPane.setAlignment(imageView, Pos.TOP_CENTER);
+        
+        ScrollPane scrollPane = new ScrollPane();
+        scrollPane.setContent(stackPaneImage);
+        scrollPane.setFitToWidth(true); // Memungkinkan konten memperluas lebar scrollPane
+        scrollPane.setFitToHeight(true); // Memungkinkan konten memperluas tinggi scrollPane
+
+
+        Scene scene = new Scene(scrollPane, 350, 600);
+        scene.getStylesheets().add(getClass().getResource("/CSS/backgroundresep.css").toExternalForm());
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }  
 }

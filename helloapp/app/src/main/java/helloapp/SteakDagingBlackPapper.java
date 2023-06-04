@@ -6,6 +6,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
+import javafx.scene.control.ScrollPane;
+import javafx.geometry.Pos;
+import javafx.scene.text.Text;
 
 public class SteakDagingBlackPapper {
     private Stage stage;
@@ -15,8 +20,10 @@ public class SteakDagingBlackPapper {
     }
 
     public void show(){
-        VBox layout = new VBox(10);
-        layout.setPadding(new Insets(20));
+        ImageView imageView = new ImageView("/backgroundresep/steakblackpaper.png");
+        imageView.setFitWidth(350);
+        imageView.setFitHeight(600);
+
 
         // Judul resep
         Label title = new Label("Steak Daging Black Papper");
@@ -26,7 +33,7 @@ public class SteakDagingBlackPapper {
         Label bahanLabel = new Label("Bahan-bahan:");
         bahanLabel.setStyle("-fx-font-weight: bold;");
 
-        Label bahanDetailLabel = new Label(
+         Text bahanDetailLabel = new Text(
                 "- 2 iris daging sapi bagian tenderloin atau sirloin (masing-masing tebal sekitar 2 cm)\n"
                         + "- 2 sendok makan minyak zaitun\n"
                         + "- 2 siung bawang putih, cincang halus\n"
@@ -37,18 +44,20 @@ public class SteakDagingBlackPapper {
                         + "- 1 sendok teh gula\n"
                         + "- Daun peterseli cincang (untuk hiasan)"
         );
+        bahanDetailLabel.setWrappingWidth(270);
 
         // Membuat label untuk cara membuat
         Label caraLabel = new Label("Cara membuat:");
         caraLabel.setStyle("-fx-font-weight: bold;");
 
-        Label caraDetailLabel = new Label(
+        Text caraDetailLabel = new Text(
                 "1. Campurkan minyak zaitun, bawang putih, lada hitam, saus tiram, saus Worcestershire, garam, dan gula dalam sebuah wadah.\n"
                         + "2. Lumuri daging sapi dengan campuran bumbu hingga merata. Diamkan selama 30 menit agar meresap.\n"
                         + "3. Panaskan wajan dengan api sedang-tinggi. Panggang steak daging sesuai selera (medium rare, medium, atau well-done).\n"
                         + "4. Angkat dan biarkan sebentar sebelum diiris.\n"
                         + "5. Sajikan steak daging black pepper dengan saus steak, nasi atau kentang, dan sayuran panggang."
         );
+        caraDetailLabel.setWrappingWidth(270);
 
         Button button = new Button();
         button.setText("<--Back");
@@ -57,11 +66,25 @@ public class SteakDagingBlackPapper {
             pencarianScene.show(); });
 
         // Menambahkan komponen ke dalam layout
+        VBox layout = new VBox(10);
+        layout.setPadding(new Insets(200,20,20,20));
         layout.getChildren().addAll(title, bahanLabel, bahanDetailLabel, caraLabel, caraDetailLabel);
-
         layout.getChildren().add(button);
-        Scene scene = new Scene(layout, 350, 600);
+        layout.setAlignment(Pos.BOTTOM_LEFT);
+
+        StackPane stackPaneImage = new StackPane();
+        stackPaneImage.getChildren().addAll(imageView, layout);
+        StackPane.setAlignment(imageView, Pos.TOP_CENTER);
+        
+        ScrollPane scrollPane = new ScrollPane();
+        scrollPane.setContent(stackPaneImage);
+        scrollPane.setFitToWidth(true); // Memungkinkan konten memperluas lebar scrollPane
+        scrollPane.setFitToHeight(true); // Memungkinkan konten memperluas tinggi scrollPane
+
+        Scene scene = new Scene(scrollPane, 350, 600);
+        scene.getStylesheets().add(getClass().getResource("/CSS/backgroundresep.css").toExternalForm());
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }  
 }

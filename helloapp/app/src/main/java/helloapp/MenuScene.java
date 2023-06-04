@@ -16,6 +16,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.text.Text;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 
 public class MenuScene {
     private Stage stage;
@@ -68,9 +71,9 @@ public class MenuScene {
             cell.setOnMouseClicked(event -> {
                 String selectedRecipe = cell.getItem();
                 if (selectedRecipe != null) {
-                    if (selectedRecipe.equals("Ayam Bakar Madu")){
-                        AyamBakarMadu ayamBakarMadu = new AyamBakarMadu(stage);
-                        ayamBakarMadu.show();
+                    if (selectedRecipe.equals("Ayam Goreng Tepung")){
+                        AyamGorengTepung ayamGorengTepung = new  AyamGorengTepung(stage);
+                        ayamGorengTepung.show();
                     } else if (selectedRecipe.equals("Ayam Szechuan Pedas")){
                         AyamSzechuanPedas ayamSzechuanPedas = new AyamSzechuanPedas(stage);
                         ayamSzechuanPedas.show();
@@ -114,9 +117,10 @@ public class MenuScene {
         label3.setStyle(" -fx-font-family:poppins;-fx-font-size: 25px; -fx-text-fill: #000000; -fx-font-weight: bold");
         
 
-        Label labelGambar1 = new Label("Ayam Bakar Madu");
+        Label labelGambar1 = new Label("Ayam Goreng Tepung");
         labelGambar1.setStyle(" -fx-font-family:poppins;-fx-font-size: 14px; -fx-text-fill: #000000; -fx-font-weight: bold");
         labelGambar1.setAlignment(Pos.CENTER);
+
 
         Label labelGambar2 = new Label("Ayam Szechuan Pedas");
         labelGambar1.setStyle(" -fx-font-family:poppins;-fx-font-size: 14px; -fx-text-fill: #000000; -fx-font-weight: bold");
@@ -143,7 +147,7 @@ public class MenuScene {
         imageView5.setFitWidth(20);
         imageView5.setFitHeight(20);
 
-        Image image6 = new Image("/image/ayam2.1.jpg");
+        Image image6 = new Image("/image/ayam1.2.jpg");
         ImageView imageView6 = new ImageView(image6);
         imageView6.setFitWidth(100);
         imageView6.setFitHeight(200);
@@ -187,8 +191,8 @@ public class MenuScene {
         buttonImage1.setMaxWidth(100);
         buttonImage1.setMaxHeight(200);
         buttonImage1.setOnAction(V -> {
-            AyamBakarMadu ayamBakarMadu = new AyamBakarMadu(stage);
-            ayamBakarMadu.show();
+            AyamGorengTepung ayamGorengTepung = new AyamGorengTepung(stage);
+            ayamGorengTepung.show();
         });
         buttonImage1.setViewOrder(10);
 
@@ -204,7 +208,7 @@ public class MenuScene {
 
 
         recipeList = FXCollections.observableArrayList(
-            "Ayam Bakar Madu", "Ayam Szechuan Pedas", "Capcay Goreng Sayur", "Daging Tumis Buncis", "Ikan Bakar Bumbu Bali","Rendang Daging Padang", "Steak Daging Black Papper", "Daging Tumis Buncis", "Ikan Goreng Tapung Asam Manis", "Sup Ikan Tomat", "Capcay Goreng Sayur", "Tumis Kangkung Bawang Putih", "Sayur Lodeh");
+            " Ayam Goreng Tepung", "Ayam Szechuan Pedas", "Capcay Goreng Sayur", "Daging Tumis Buncis", "Ikan Bakar Bumbu Bali","Rendang Daging Padang", "Steak Daging Black Papper", "Daging Tumis Buncis", "Ikan Goreng Tapung Asam Manis", "Sup Ikan Tomat", "Capcay Goreng Sayur", "Tumis Kangkung Bawang Putih", "Sayur Lodeh");
 
         HBox hBox = new HBox(5);
         hBox.getChildren().add(buttonAyam);
