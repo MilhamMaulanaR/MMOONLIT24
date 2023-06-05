@@ -61,8 +61,11 @@ public class SayurLodeh {
         Button button = new Button();
         button.setText("<--Back");
         button.setOnAction(V -> {
-            MenuScene pencarianScene = new MenuScene(stage);
-            pencarianScene.show();
+            // MenuScene pencarianScene = new MenuScene(stage);
+            // pencarianScene.show();
+
+            Sayur sayur = new Sayur(stage);
+            sayur.show();
         });
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(200,20,20,20));

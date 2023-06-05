@@ -60,8 +60,11 @@ public class CapcayGorengSayur {
         Button button = new Button();
         button.setText("<--Back");
         button.setOnAction(V -> {
-            MenuScene pencarianScene = new MenuScene(stage);
-            pencarianScene.show();
+            // MenuScene pencarianScene = new MenuScene(stage);
+            // pencarianScene.show();
+
+            Sayur sayur = new Sayur(stage);
+            sayur.show();
         });
 
         VBox layout = new VBox(10);

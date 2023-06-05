@@ -86,6 +86,7 @@ public class Ayam {
             MenuScene pencarianScene = new MenuScene(stage);
             pencarianScene.show(); });
 
+
         GridPane gridPane = new GridPane();
         gridPane.setPadding(new Insets(20));
         gridPane.add(hBox,1,1);

@@ -72,15 +72,15 @@ public class Daging {
         imageView2.setClip(rectangle);
         imageView3.setClip(rectangle3);
         
-        Label labelGambar1 = new Label("Rendang Daging ");
+        Label labelGambar1 = new Label("Daging Tumis Buncis ");
         labelGambar1.setStyle(" -fx-font-family:poppins;-fx-font-size: 14px; -fx-text-fill: #000000; -fx-font-weight: bold");
         labelGambar1.setAlignment(Pos.CENTER);
 
-        Label labelGambar2 = new Label("Daging Black Papper");
+        Label labelGambar2 = new Label(" Rendang Daging");
         labelGambar2.setStyle(" -fx-font-family:poppins;-fx-font-size: 14px; -fx-text-fill: #000000; -fx-font-weight: bold");
         labelGambar2.setAlignment(Pos.CENTER);
 
-        Label labelGambar3 = new Label("Daging Tumis Buncis");
+        Label labelGambar3 = new Label("Daging Black Papper");
         labelGambar3.setStyle(" -fx-font-family:poppins;-fx-font-size: 14px; -fx-text-fill: #000000; -fx-font-weight: bold");
         labelGambar3.setAlignment(Pos.CENTER);
 
@@ -88,7 +88,11 @@ public class Daging {
         button.setText("<--Back");
         button.setOnAction(V -> {
             MenuScene pencarianScene = new MenuScene(stage);
-            pencarianScene.show(); });
+            pencarianScene.show(); 
+
+            // Daging daging = new Daging(stage);
+            // daging.show();
+        });
 
         HBox hBox = new HBox();
         hBox.getChildren().add(buttonDagingTumisBuncis);

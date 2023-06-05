@@ -78,8 +78,10 @@ public class IkanGorengTepungAsamManis {
         Button button = new Button();
         button.setText("<--Back");
         button.setOnAction(V -> {
-            MenuScene pencarianScene = new MenuScene(stage);
-            pencarianScene.show(); 
+            // MenuScene pencarianScene = new MenuScene(stage);
+            // pencarianScene.show(); 
+            Ikan ikan = new Ikan(stage);
+            ikan.show();
         });
 
         VBox layout = new VBox(10);

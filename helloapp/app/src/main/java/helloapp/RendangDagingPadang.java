@@ -74,14 +74,17 @@ public class RendangDagingPadang {
         Button button = new Button();
         button.setText("<--Back");
         button.setOnAction(V -> {
-            MenuScene pencarianScene = new MenuScene(stage);
-            pencarianScene.show(); 
+            // MenuScene pencarianScene = new MenuScene(stage);
+            // pencarianScene.show(); 
+            
+            Daging daging = new Daging(stage);
+            daging.show();
         });
 
         // Menambahkan komponen ke dalam layout
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(200,20,20,20));
-        layout.getChildren().addAll(title,bahanLabel,bahanDetailLabel , caraLabel, caraDetailLabel);
+        layout.getChildren().addAll(title,bahanLabel,bahanDetailLabel,caraLabel,caraDetailLabel);
         layout.getChildren().add(button);
         layout.setAlignment(Pos.BOTTOM_LEFT);
 

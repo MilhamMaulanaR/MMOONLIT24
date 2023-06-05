@@ -10,6 +10,7 @@ public class App extends Application {
     public void start(Stage primaryStage) {
         HomeScene homeScene = new HomeScene(primaryStage);
         primaryStage.setTitle("Recipe Finder");
+        // primaryStage
         homeScene.show();
     }
     public static void main(String[] args) {

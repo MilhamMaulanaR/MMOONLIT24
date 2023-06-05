@@ -62,8 +62,10 @@ public class AyamGorengTepung {
         Button button = new Button();
         button.setText("<--Back");
         button.setOnAction(V -> {
-            MenuScene pencarianScene = new MenuScene(stage);
-            pencarianScene.show();
+            // MenuScene pencarianScene = new MenuScene(stage);
+            // pencarianScene.show();
+            Ayam ayam = new Ayam(stage);
+            ayam.show();
         });
         VBox layout = new VBox(10);
         layout.setId("LAYOUTRESEP");

@@ -62,8 +62,12 @@ public class DagingTumisBuncis {
         Button button = new Button();
         button.setText("<--Back");
         button.setOnAction(V -> {
-            MenuScene pencarianScene = new MenuScene(stage);
-            pencarianScene.show(); });
+            // MenuScene pencarianScene = new MenuScene(stage);
+            // pencarianScene.show(); 
+            Daging daging = new Daging(stage);
+            daging.show();
+            
+        });
 
         // Menambahkan komponen ke dalam layout
         VBox layout = new VBox(10);
